@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Forecast Pro</h1>
+            <p>Get accurate weather information for any location</p>
+        </header>
+        
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-page="weather">Weather</div>
+            <div class="nav-tab" data-page="info">Information</div>
+        </div>
+        
+        <!-- Weather Page -->
+        <div class="page active" id="weather-page">
+            <div class="card">
+                <div class="search-container">
+                    <input type="text" id="cityInput" placeholder="Enter city name">
+                    <button id="getWeatherBtn">Get Weather</button>
+                </div>
+                
+                <div id="weatherInfo">
+                    <div class="weather-display">
+                        <div class="city-name">Search for a city</div>
+                        <div class="weather-icon"><i class="fas fa-search-location"></i></div>
+                        <div class="temperature">--°C</div>
+                        <div class="weather-description">Enter a city name to get weather information</div>
+                        
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <div class="detail-label">Feels Like</div>
+                                <div class="detail-value">--°C</div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-tint"></i>
+                                <div class="detail-label">Humidity</div>
+                                <div class="detail-value">--%</div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-wind"></i>
+                                <div class="detail-label">Wind Speed</div>
+                                <div class="detail-value">-- km/h</div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                                <div class="detail-label">Pressure</div>
+                                <div class="detail-value">-- hPa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-calendar-week"></i> 5-Day Forecast</h2>
+                <div class="forecast-container" id="forecastContainer">
+                    <div class="forecast-day">
+                        <div class="forecast-date">Day 1</div>
+                        <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                        <div class="forecast-temp">--°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Day 2</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <div class="forecast-temp">--°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Day 3</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="forecast-temp">--°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Day 4</div>
+                        <div class="forecast-icon"><i class="fas fa-cloud-rain"></i></div>
+                        <div class="forecast-temp">--°C</div>
+                    </div>
+                    <div class="forecast-day">
+                        <div class="forecast-date">Day 5</div>
+                        <div class="forecast-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="forecast-temp">--°C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Information Page -->
+        <div class="page" id="info-page">
+            <div class="card">
+                <h2><i class="fas fa-info-circle"></i> About Weather Forecast Pro</h2>
+                <p>Weather Forecast Pro is a modern, responsive web application that provides accurate weather information for locations worldwide. Our app uses reliable data sources to deliver current conditions and forecasts to help you plan your activities.</p>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-sun"></i> Current Weather</h3>
+                        <p>Get real-time weather information including temperature, humidity, wind speed, and atmospheric pressure for any city worldwide.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-chart-line"></i> 5-Day Forecast</h3>
+                        <p>Plan ahead with our detailed 5-day weather forecast that helps you prepare for upcoming weather conditions.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mobile-alt"></i> Fully Responsive</h3>
+                        <p>Our application works perfectly on all devices - from desktop computers to smartphones and tablets.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-globe-americas"></i> Global Coverage</h3>
+                        <p>Access weather information for thousands of cities across the globe with our comprehensive database.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2><i class="fas fa-question-circle"></i> How to Use</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3><i class="fas fa-search"></i> Step 1</h3>
+                        <p>Enter the name of a city in the search box on the Weather page.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-mouse-pointer"></i> Step 2</h3>
+                        <p>Click the "Get Weather" button to retrieve current weather data.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3><i class="fas fa-chart-bar"></i> Step 3</h3>
+                        <p>View the current weather conditions and 5-day forecast for your selected location.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Weather Forecast Pro &copy; 2023 | Data provided by OpenWeatherMap</p>
+        </footer>
+    </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
